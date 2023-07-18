@@ -21,6 +21,29 @@
   margin: auto 0;
 }
 
+@media screen and (max-width: 1366px){
+  .sections {
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 1rem 2rem;
+    width: 70px;
+    height: 70px;
+    padding: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 0;
+    transform: translateY(-4px);
+  }
+
+  .logoNombre {
+    font-size: 1.7rem;
+  }
+  
+  
+}
+
 @media screen and (max-width: 330px) {
   .Nav_bar {
     margin: 0;

@@ -1,3 +1,8 @@
+:root {
+  --color-sidebar: rgb(86, 118, 179);
+  --color-textSidebar: white;
+}
+
 .cardTile {
   text-align: center;
   height: 400px;
@@ -11,6 +16,35 @@
   width: 200px;
   height: 200px;
   margin-bottom: 2rem;
+}
+
+.consultarBtn {
+  background-color: var(--color-sidebar);
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  color: var(--color-textSidebar);
+  font-weight: 800;
+}
+
+.consultarBtn:hover{
+  background-color: var(--color-textSidebar);
+  color: var(--color-sidebar);
+  border: 1px solid var(--color-sidebar);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1366px) {
+  .cardTile {
+    height: 300px;
+    width: 200px;
+  }
+
+  .cardTile img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media screen and (max-width: 330px) {

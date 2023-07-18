@@ -11,6 +11,13 @@
   scale: 110%;
 }
 
+@media screen and (max-width: 1366px) {
+  .titles {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (max-width: 330px) {
   .titles {
     font-size: 1.2rem;

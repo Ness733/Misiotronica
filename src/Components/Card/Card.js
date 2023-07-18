@@ -6,6 +6,7 @@ function Card(props) {
       <h3>{props.cardTitle}</h3>
       <img src={props.imgSrc} alt=""></img>
       <p>{props.cardText}</p>
+      <button className={styles.consultarBtn}>CONSULTAR</button>
     </div>
   );
 }
