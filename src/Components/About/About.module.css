@@ -1,0 +1,19 @@
+.About {
+  position: absolute;
+  right: 20%;
+  top: 25%;
+  text-align: center;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.About h1 {
+  padding: 3rem;
+}
+
+.About p {
+  padding: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+}

@@ -1,0 +1,26 @@
+.cardTile {
+  text-align: center;
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(6px 6px 5px black);
+}
+
+.cardTile img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 330px) {
+  .cardTile {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cardTile img {
+    width: 200px;
+    height: 200px;
+  }
+}
