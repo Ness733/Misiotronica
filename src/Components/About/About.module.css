@@ -1,7 +1,6 @@
 .About {
-  position: absolute;
-  right: 20%;
-  top: 25%;
+  position: inherit;
+  margin: 0 auto;
   text-align: center;
   max-width: 1000px;
   background-color: white;

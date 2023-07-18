@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+}
+
+.contactDiv {
+  display: flex;
+  padding: 5rem;
+  gap: 2rem;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  max-width: 50vmax;
+  min-height: 50vmin;
+  border-radius: 20px;
+}
+
+.submitBtn {
+  background-color: yellowgreen;
+}
+
+.textArea {
+  height: 200px;
+}
