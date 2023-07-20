@@ -37,32 +37,34 @@ export function Sidebar() {
 
   return (
     <span className={styles.Shadows}>
-      <button
-        className={`${styles.openSidebar} ${styles[status]}`}
-        onClick={() => {
-          toggleSidebar();
-          toggleButton();
-        }}
-      >
-        <div className={styles.burger}></div>
-        <div className={styles.burger}></div>
-        <div className={styles.burger}></div>
-      </button>
-      <div ref={sidebarRef} className={`${styles.Sidebar} ${styles[state]}`}>
-        <ul>
-          <Link className={styles.links} to="/">
-            Inicio
-          </Link>
-          <Link className={styles.links} to="/about">
-            Sobre Nosotros
-          </Link>
-          <Link className={styles.links} to="/sales">
-            Ventas
-          </Link>
-          <Link className={styles.links} to="/contact">
-            Contacto
-          </Link>
-        </ul>
+      <div className={styles.contenedorSidebar}>
+        <button
+          className={`${styles.openSidebar} ${styles[status]}`}
+          onClick={() => {
+            toggleSidebar();
+            toggleButton();
+          }}
+        >
+          <div className={styles.burger}></div>
+          <div className={styles.burger}></div>
+          <div className={styles.burger}></div>
+        </button>
+        <div ref={sidebarRef} className={`${styles.Sidebar} ${styles[state]}`}>
+          <ul>
+            <Link className={styles.links} to="/">
+              Inicio
+            </Link>
+            <Link className={styles.links} to="/about">
+              Sobre Nosotros
+            </Link>
+            <Link className={styles.links} to="/sales">
+              Ventas
+            </Link>
+            <Link className={styles.links} to="/contact">
+              Contacto
+            </Link>
+          </ul>
+        </div>
       </div>
     </span>
   );

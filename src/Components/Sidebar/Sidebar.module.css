@@ -3,6 +3,16 @@
   --color-textSidebar: white;
 }
 
+.contenedorSidebar {
+  position: fixed;
+  position: -webkit-sticky;
+  transform: translateY(200px);
+  height: 300px;
+  width: 500px;
+  left: 1px;
+  z-index: 100;
+}
+
 .Sidebar {
   position: fixed;
   position: -webkit-sticky;
@@ -40,8 +50,7 @@
 .openSidebar {
   position: fixed;
   position: -webkit-sticky;
-  position: sticky;
-  left: -1%;
+  left: 390px;
   top: 45%;
   background-color: var(--color-sidebar);
   color: var(--color-textSidebar);
@@ -62,7 +71,7 @@
 .inactive {
   position: fixed;
   position: -webkit-sticky;
-  transform: translateX(-420px);
+  transform: translateX(-400px);
   animation: slideIn 0.5s;
 }
 
@@ -84,7 +93,7 @@
   position: fixed;
   position: -webkit-sticky;
   position: sticky;
-  transform: translateX(-20px);
+  transform: translateX(-410px);
   animation: slideInButton 0.5s;
 }
 
@@ -99,7 +108,7 @@
 
 @keyframes slideIn {
   0% {
-    transform: translateX(10px);
+    transform: translateX(0px);
   }
 
   100% {
@@ -109,10 +118,10 @@
 
 @keyframes slideInButton {
   0% {
-    transform: translateX(385px);
+    transform: translateX(-30px);
   }
   100% {
-    transform: translateX(-18px);
+    transform: translateX(-410px);
   }
 }
 
