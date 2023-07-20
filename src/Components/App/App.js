@@ -12,12 +12,13 @@ import {
 import { About } from "../About/About.js";
 import { Contact } from "../Contact/Contact.js";
 import { Sidebar } from "../Sidebar/Sidebar.js";
+import { Main } from "../Main/Main.js";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        <Route index element={<Sales />} />
+        <Route index element={<Main />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Sales" element={<Sales />} />
