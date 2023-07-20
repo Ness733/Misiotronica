@@ -1,0 +1,28 @@
+.landingPage {
+  text-align: center;
+  margin-top: 5rem;
+  max-width: 60vmax;
+  min-height: 50vmin;
+  margin-left: 500px;
+  background-color: rgb(162, 207, 250);
+  border-radius: 20px;
+  filter: drop-shadow(4px 4px 5px black);
+}
+
+.landingPage img {
+  float: left;
+  padding: 6rem 2rem;
+  width: 300px;
+  height: 300px;
+}
+
+.landingPage h1 {
+  padding: 0 7rem;
+  padding-top: 8rem;
+}
+
+.landingPage p {
+  width: 900px;
+  font-size: 3rem;
+  padding: 0 7rem;
+}
