@@ -1,10 +1,15 @@
 .About {
-  position: inherit;
-  margin: 0 auto;
+  display: flex;
+  padding: 3rem;
+  gap: 2rem;
+  margin: 200px auto;
+  flex-direction: column;
   text-align: center;
-  max-width: 1000px;
   background-color: white;
+  max-width: 40vmax;
+  min-height: 40vmin;
   border-radius: 20px;
+  filter: drop-shadow(4px 4px 5px black);
 }
 
 .About h1 {
