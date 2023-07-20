@@ -5,14 +5,14 @@ export function Contact() {
     <div>
       <form className={styles.contactDiv}>
         <h1>Contacto</h1>
-        <label for="fname">Nombre Completo</label>
+        <label>Nombre Completo</label>
         <input
           className={styles.name}
           type="text"
           name="fullname"
           placeholder="Nombre completo."
         />
-        <label for="lname">Email de contacto</label>
+        <label>Email de contacto</label>
         <input
           className={styles.email}
           type="text"
