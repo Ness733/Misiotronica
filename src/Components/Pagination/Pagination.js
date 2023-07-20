@@ -1,6 +1,11 @@
 import styles from "./Pagination.module.css";
 
-export const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
+export const Pagination = ({
+  itemsPerPage,
+  totalItems,
+  paginate,
+  currentPage,
+}) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
@@ -18,13 +23,12 @@ export const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
         {pageNumbers.map((number) => (
           <li key={number} className={styles.pageItem}>
             <button
-              onClick={(e) => {
+              onClick={() => {
                 paginate(number);
-                if (e.relatedTarget === null) {
-                  e.target.focus();
-                }
               }}
-              className={`${styles.pageNumber}`}
+              className={`${styles.pageNumber} ${
+                styles[number === currentPage ? "active" : ""]
+              }`}
             >
               {number}
             </button>

@@ -6,7 +6,6 @@
 .Pagination {
   display: flex;
   position: absolute;
-
   transform: translateX(90%);
   list-style: none;
 }
@@ -18,11 +17,7 @@
   margin: 1rem;
 }
 
-.activePage {
-  border: 4px solid black !important;
-}
-
-.pageNumber {
+.Pagination button {
   height: 60px;
   width: 70px;
   color: white;
@@ -30,18 +25,18 @@
   background-color: var(--color-sidebar);
   border-radius: 10px;
   font-size: 2rem;
-  margin-top: 100px;
+  margin-top: 30px;
   margin-bottom: 70px;
 }
 
-.pageNumber:hover {
+.Pagination button:hover {
   background-color: white;
   color: var(--color-sidebar);
   border: 3px solid var(--color-textSidebar);
   cursor: pointer;
 }
 
-.pageNumber:focus {
+.Pagination button.active {
   background-color: white;
   color: var(--color-sidebar);
 }
