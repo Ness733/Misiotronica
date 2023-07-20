@@ -28,6 +28,7 @@ function Ventas() {
         itemsPerPage={itemsPerPage}
         totalItems={listaArticulos.length}
         paginate={paginate}
+        currentPage={currentPage}
       />
     </section>
   );
