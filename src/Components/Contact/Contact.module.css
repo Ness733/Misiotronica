@@ -1,22 +1,55 @@
+:root {
+  --color-sidebar: rgb(86, 118, 179);
+  --color-textSidebar: white;
+}
+
 h1 {
   text-align: center;
 }
 
+.name {
+  height: 30px;
+}
+
+.email {
+  height: 30px;
+}
+
 .contactDiv {
   display: flex;
-  padding: 5rem;
+  padding: 3rem;
   gap: 2rem;
   margin: 0 auto;
   flex-direction: column;
   text-align: center;
   background-color: white;
-  max-width: 50vmax;
-  min-height: 50vmin;
+  max-width: 40vmax;
+  min-height: 40vmin;
   border-radius: 20px;
+  filter: drop-shadow(4px 4px 5px black);
+  margin: 200px auto;
+}
+
+.contactDiv label {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .submitBtn {
-  background-color: yellowgreen;
+  margin: 0 auto;
+  background-color: var(--color-sidebar);
+  height: 70px;
+  width: 120px;
+  border: 2px solid var(--color-sidebar);
+  border-radius: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.submitBtn:hover {
+  background-color: white;
+  color: var(--color-sidebar);
+  cursor: pointer;
 }
 
 .textArea {

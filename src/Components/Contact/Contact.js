@@ -5,16 +5,26 @@ export function Contact() {
     <div>
       <form className={styles.contactDiv}>
         <h1>Contacto</h1>
-        <label for="fname">Full Name</label>
-        <input type="text" name="fullname" placeholder="Your full name." />
-        <label for="lname">Contact E-mail</label>
-        <input type="text" name="email" placeholder="Contact Email." />
+        <label for="fname">Nombre Completo</label>
+        <input
+          className={styles.name}
+          type="text"
+          name="fullname"
+          placeholder="Nombre completo."
+        />
+        <label for="lname">Email de contacto</label>
+        <input
+          className={styles.email}
+          type="text"
+          name="email"
+          placeholder="Dirección de Email."
+        />
         <textarea
           className={styles.textArea}
           name="subject"
-          placeholder="Your message here..."
+          placeholder="Su mensaje aquí..."
         ></textarea>
-        <input className={styles.submitBtn} type="submit" value="Send" />
+        <input className={styles.submitBtn} type="submit" value="Enviar" />
       </form>
     </div>
   );
