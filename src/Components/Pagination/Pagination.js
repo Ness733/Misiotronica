@@ -1,4 +1,5 @@
 import styles from "./Pagination.module.css";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 export const Pagination = ({
   itemsPerPage,
@@ -7,17 +8,14 @@ export const Pagination = ({
   currentPage,
 }) => {
   const pageNumbers = [];
+  const currentFilter = useSelector((state) => state.searchContent);
+  console.log(currentFilter);
 
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
 
-  // set active button focus
-  // const setFocus = (e) => {
-  //   e.target.focus();
-  // };
-
-  return (
+  return currentFilter === "" ? (
     <div>
       <ul className={styles.Pagination}>
         {pageNumbers.map((number) => (
@@ -35,6 +33,10 @@ export const Pagination = ({
           </li>
         ))}
       </ul>
+    </div>
+  ) : (
+    <div>
+      <h2 className={styles.endSearch}>No se encontraron más resultados</h2>
     </div>
   );
 };
