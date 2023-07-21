@@ -1,5 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
+// const searchValue = document.getElementById("searchValue");
+
 const searchInput = "Search";
 
 export function searchText(value) {
@@ -10,7 +12,7 @@ export function searchText(value) {
 }
 
 const initialState = {
-  searchContent: " ",
+  searchContent: "",
 };
 
 // Reducer
@@ -20,7 +22,6 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case searchInput:
       return {
-        ...state,
         searchContent: action.value,
       };
     default:
@@ -29,7 +30,7 @@ const reducer = (state = initialState, action) => {
 };
 
 export const store = configureStore({ reducer });
-console.log("Initial State", store.getState());
-store.subscribe(() => console.log("update state", store.getState()));
+// console.log("Initial State", store.getState());
+// store.subscribe(() => console.log("update state", store.getState()));
 
-// store.dispatch(searchText("Modulo"));
+// store.dispatch(pageReload(""));
