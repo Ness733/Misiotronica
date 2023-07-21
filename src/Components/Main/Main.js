@@ -6,7 +6,7 @@ export function Main() {
     <div className={styles.landingPage}>
       <img src={logo} alt="" />
       <h1>Bienvenidos a Misiotrónica</h1>
-      <p>El sitio donde encontrar todos sus componentes electrónicos.</p>
+      <p>Donde habitan los cositos, pendorchos, y demás.</p>
     </div>
   );
 }

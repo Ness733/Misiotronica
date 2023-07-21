@@ -17,12 +17,16 @@
 }
 
 .landingPage h1 {
+  font-size: 3rem;
   padding: 0 7rem;
   padding-top: 8rem;
 }
 
 .landingPage p {
+  color: var(--color-textSidebar);
   width: 900px;
+  font-weight: 600;
   font-size: 3rem;
   padding: 0 7rem;
+  filter: drop-shadow(2px 2px 4px black);
 }
