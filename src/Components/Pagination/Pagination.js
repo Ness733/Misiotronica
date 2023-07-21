@@ -9,13 +9,13 @@ export const Pagination = ({
 }) => {
   const pageNumbers = [];
   const currentFilter = useSelector((state) => state.searchContent);
-  console.log(currentFilter);
+  // console.log(currentFilter);
 
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
 
-  return currentFilter === "" ? (
+  return currentFilter === " " ? (
     <div>
       <ul className={styles.Pagination}>
         {pageNumbers.map((number) => (
