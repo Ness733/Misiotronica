@@ -2,33 +2,41 @@ import styles from "./Search.module.css";
 import { useDispatch } from "react-redux";
 import { searchText } from "../Redux/store";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useEffect } from "react";
 
 export default function Search() {
   const searchInput = document.getElementById("searchValue");
   const dispatch = useDispatch();
-
+  const readState = useSelector((state) => state.searchContent);
+  useEffect(() => {
+    dispatch(searchText(" "));
+  }, [dispatch]);
   const getSearch = () => {
-    setTimeout(() => {
-      const getText = searchInput.value;
-      const newGetText = getText;
+    console.log(readState);
+    try {
+      setTimeout(() => {
+        const getText = searchInput.value !== "" ? searchInput.value : " ";
+        const newGetText = getText
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, ""); // remove accents
 
-      console.log(newGetText);
-      if (getText !== "") {
-        // dispatch(searchText(newGetText[0].toUpperCase() + newGetText.slice(1)));
-        dispatch(
-          searchText(
-            getText
-              .toLowerCase()
-              .split(" ")
-              .map((element) => element[0].toUpperCase() + element.slice(1))
-              .join(" ")
-          )
-        );
-        searchInput.value = "";
-      } else {
-        dispatch(searchText(""));
-      }
-    }, 100);
+        // console.log(newGetText);
+        if (newGetText !== " ") {
+          // dispatch(searchText(newGetText[0].toUpperCase() + newGetText.slice(1)));
+          dispatch(
+            searchText(
+              newGetText
+                .toLowerCase()
+                .split(" ")
+                .map((element) => element[0].toUpperCase() + element.slice(1))
+                .join(" ") // set search input to lowercase, then split each word and capitalize them before joining.
+            )
+          );
+          searchInput.value = "";
+        }
+      }, 500);
+    } catch {}
   };
 
   return (
@@ -47,8 +55,8 @@ export default function Search() {
           onClick={() => {
             getSearch();
             setTimeout(() => {
-              searchInput.value = "";
-            }, 200);
+              // searchInput.value = "";
+            }, 500);
           }}
         ></input>
       </Link>
