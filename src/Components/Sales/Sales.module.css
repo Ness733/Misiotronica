@@ -1,16 +1,45 @@
+:root {
+  --color-sidebar: rgb(86, 118, 179);
+  --color-textSidebar: white;
+}
+
 .hero {
+  text-align: center;
   margin-top: 5rem;
-  max-width: 90vmax;
+  max-width: 70vmax;
   max-height: 50vw;
-  margin-left: 400px;
+  margin-left: 30rem;
 }
 
 .hero h1 {
   font-size: 5rem;
-  margin-right: 10rem;
   color: white;
   filter: drop-shadow(2px 2px 4px black);
-  margin-bottom: 150px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-style: italic;
+  padding-bottom: 80px;
+}
+
+.returnBtn {
+  padding: 0 2rem;
+  border-radius: 20px;
+  height: 80px;
+  filter: drop-shadow(2px 2px 4px black);
+  position: relative;
+  border: 2px solid var(--color-sidebar);
+  background-color: var(--color-sidebar);
+  color: var(--color-textSidebar);
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.returnBtn:hover {
+  cursor: pointer;
+  background-color: var(--color-textSidebar);
+  color: var(--color-sidebar);
 }
 
 .list {
