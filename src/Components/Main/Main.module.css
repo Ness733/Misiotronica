@@ -1,4 +1,5 @@
 .landingPage {
+  position: inherit;
   text-align: center;
   margin-top: 5rem;
   max-width: 60vmax;
@@ -29,4 +30,33 @@
   font-size: 3rem;
   padding: 0 7rem;
   filter: drop-shadow(2px 2px 4px black);
+}
+
+@media screen and (max-width: 360px) {
+  .landingPage {
+    margin: 1rem;
+  }
+
+  .landingPage img {
+    display: none;
+    padding: 1rem 1rem;
+    float: none;
+    width: 200px;
+    height: 200px;
+  }
+
+  .landingPage h1 {
+    padding: 1rem;
+    padding-bottom: 0;
+    font-size: 2rem;
+  }
+
+  .landingPage p {
+    font-size: 1.8rem;
+    text-align: center;
+
+    padding: 0;
+    padding-bottom: 2rem;
+    width: inherit;
+  }
 }

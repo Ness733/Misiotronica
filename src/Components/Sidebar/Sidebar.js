@@ -1,6 +1,6 @@
 import styles from "./Sidebar.module.css";
-import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export function Sidebar() {
   const [state, setState] = useState("inactive");
@@ -15,9 +15,8 @@ export function Sidebar() {
         setOpen("closed");
       }
     };
-
     document.addEventListener("mousedown", handler);
-  });
+  }, []);
 
   function toggleSidebar() {
     if (state === "inactive") {

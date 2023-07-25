@@ -3,50 +3,59 @@ import { useDispatch } from "react-redux";
 import { searchText } from "../Redux/store";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Search() {
-  const searchInput = document.getElementById("searchValue");
   const dispatch = useDispatch();
   const readState = useSelector((state) => state.searchContent);
-  useEffect(() => {
-    dispatch(searchText(" "));
-  }, [dispatch]);
-  const getSearch = () => {
-    console.log(readState);
-    try {
-      setTimeout(() => {
-        const getText = searchInput.value !== "" ? searchInput.value : " ";
-        const newGetText = getText
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, ""); // remove accents
 
-        // console.log(newGetText);
-        if (newGetText !== " ") {
-          // dispatch(searchText(newGetText[0].toUpperCase() + newGetText.slice(1)));
-          dispatch(
-            searchText(
-              newGetText
-                .toLowerCase()
-                .split(" ")
-                .map((element) => element[0].toUpperCase() + element.slice(1))
-                .join(" ") // set search input to lowercase, then split each word and capitalize them before joining.
-            )
-          );
-          searchInput.value = "";
-        }
-      }, 500);
-    } catch {}
+  const [value, setValue] = useState(readState);
+
+  const getSearch = () => {
+    const getText = value;
+    const newGetText = getText
+      .normalize("NFD")
+      .replace(
+        /([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+/gi,
+        "$1"
+      )
+      .normalize();
+
+    if (newGetText !== "") {
+      dispatch(
+        searchText(
+          newGetText
+            .toLowerCase()
+            .split(" ")
+            .map((element) => element[0].toUpperCase() + element.slice(1))
+            .join(" ")
+        )
+      );
+    }
   };
 
   return (
     <div className={styles.searchBar}>
       <input
+        onChange={(e) => {
+          setValue(e.target.value);
+          getSearch();
+        }}
         className={styles.searchBox}
         type="text"
         id="searchValue"
+        value={value}
         placeholder="¿Qué esta buscando?"
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            getSearch();
+            setValue("");
+          } else {
+            return;
+          }
+        }}
       ></input>
+
       <Link to="/Sales">
         <input
           className={styles.searchBtn}
@@ -54,9 +63,7 @@ export default function Search() {
           value="Buscar"
           onClick={() => {
             getSearch();
-            setTimeout(() => {
-              // searchInput.value = "";
-            }, 500);
+            setValue("");
           }}
         ></input>
       </Link>

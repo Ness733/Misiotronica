@@ -1,11 +1,11 @@
-const listaArticulos = [
+export const itemsList = [
   {
-    nombre: "Estaño Eximetal 1mm 60/40 Soldadura Electronica Rollo",
+    nombre: "Eximetal 1mm 60/40 Soldadura Electronica Rollo de Estaño",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_665302-MLA45836620702_052021-O.webp",
   },
   {
-    nombre: "Soldador Estaño 40w Lápiz Cautín Punta Eléctrico Profesional",
+    nombre: "Soldador Estaño 40w Lapiz Cautin Punta Electrico Profesional",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_629539-MLU70356568839_072023-V.webp",
   },
@@ -50,7 +50,7 @@ const listaArticulos = [
       "https://http2.mlstatic.com/D_NQ_NP_882638-MLA69408087797_052023-V.webp",
   },
   {
-    nombre: "Módulo Conversor Rs485 Ttl Max485 Transceiver Arduino Hobb",
+    nombre: "Modulo Conversor Rs485 Ttl Max485 Transceiver Arduino Hobb",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_949013-MLA52962654710_122022-O.webp",
   },
@@ -60,7 +60,7 @@ const listaArticulos = [
       "https://http2.mlstatic.com/D_NQ_NP_919426-MLA51036643665_082022-O.webp",
   },
   {
-    nombre: "Encoder Rotativo Ky-040 Módulo - Arduino",
+    nombre: "Encoder Rotativo Ky-040 Modulo - Arduino",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_725138-MLA41148508181_032020-O.webp",
   },
@@ -70,22 +70,22 @@ const listaArticulos = [
       "https://http2.mlstatic.com/D_NQ_NP_750984-MLA52962744554_122022-O.webp",
   },
   {
-    nombre: "Módulo Led Rgb Smd 5050pwm 3 Colores Ky-009 - Arduino",
+    nombre: "Modulo Led Rgb Smd 5050pwm 3 Colores Ky-009 - Arduino",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_655618-MLA42538188902_072020-O.webp",
   },
   {
-    nombre: "Hc-sr04 Módulo Sensor Ultrasonico - Arduino",
+    nombre: "Hc-sr04 Modulo Sensor Ultrasonico - Arduino",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_686957-MLA43844630619_102020-O.webp",
   },
   {
-    nombre: "Módulo Sensor Detector/seguidor De Línea Ky-033 - Arduino",
+    nombre: "Modulo Sensor Detector/seguidor De Linea Ky-033 - Arduino",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_775516-MLA42644278316_072020-O.webp",
   },
   {
-    nombre: "Módulo Sensor Infrarrojo Detector De Obstáculos Fc51 Arduino",
+    nombre: "Modulo Sensor Infrarrojo Detector De Obstaculos Fc51 Arduino",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_865333-MLA44877539081_022021-O.webp",
   },
@@ -100,20 +100,18 @@ const listaArticulos = [
       "https://http2.mlstatic.com/D_NQ_NP_773431-MLA46683328868_072021-O.webp",
   },
   {
-    nombre: "Módulo Display 8 Digitos 7 Segmentos C/max7219 - Arduino",
+    nombre: "Modulo Display 8 Digitos 7 Segmentos C/max7219 - Arduino",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_936817-MLA43693878996_102020-O.webp",
   },
   {
-    nombre: "Módulo Amplificador De Audio Tda 7293 Mono 100w Rms Tda7293",
+    nombre: "Modulo Amplificador De Audio Tda 7293 Mono 100w Rms Tda7293",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_933367-MLA46493946458_062021-O.webp",
   },
   {
-    nombre: "Módulo Amplificador De Audio Estereo 2 X 100w Clase D Tpa3116d2",
+    nombre: "Modulo Amplificador De Audio Estereo 2 X 100w Clase D Tpa3116d2",
     imagen:
       "https://http2.mlstatic.com/D_NQ_NP_722787-MLA51846141799_102022-O.webp",
   },
 ];
-
-export default listaArticulos;

@@ -48,3 +48,21 @@
   filter: drop-shadow(2px 2px 4px black);
   transform: translateX(-20px);
 }
+
+@media screen and (max-width: 360px) {
+  .Pagination {
+    display: none;
+    padding: 0;
+  }
+
+  .endSearch {
+    position: absolute;
+    transform: translate(5%, 30%);
+    padding: 1rem;
+    max-width: 70vmin;
+  }
+
+  .endSearch h2 {
+    font-size: 2rem;
+  }
+}

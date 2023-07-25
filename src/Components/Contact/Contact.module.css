@@ -55,3 +55,10 @@ h1 {
 .textArea {
   height: 200px;
 }
+
+@media screen and (max-width: 360px) {
+  .contactDiv {
+    margin: 1.5rem;
+    padding: 1rem;
+  }
+}
