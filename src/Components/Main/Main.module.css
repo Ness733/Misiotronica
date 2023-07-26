@@ -4,7 +4,7 @@
   margin-top: 5rem;
   max-width: 60vmax;
   min-height: 50vmin;
-  margin-left: 500px;
+  margin-left: 45vmin;
   background-color: rgb(162, 207, 250);
   border-radius: 20px;
   filter: drop-shadow(4px 4px 5px black);
@@ -13,8 +13,8 @@
 .landingPage img {
   float: left;
   padding: 6rem 2rem;
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .landingPage h1 {
@@ -25,11 +25,53 @@
 
 .landingPage p {
   color: var(--color-textSidebar);
-  width: 900px;
+  width: inherit;
   font-weight: 600;
   font-size: 3rem;
   padding: 0 7rem;
   filter: drop-shadow(2px 2px 4px black);
+}
+
+@media screen and (max-width: 1366px) {
+  .landingPage img {
+    width: 200px;
+    height: 200px;
+    transform: translateY(-50px);
+  }
+
+  .landingPage h1 {
+    padding-top: 5rem;
+    font-size: 2rem;
+  }
+
+  .landingPage p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .landingPage {
+    margin: 1rem;
+  }
+
+  .landingPage h1 {
+    padding: 1rem;
+    padding-bottom: 0;
+    font-size: 2rem;
+  }
+
+  .landingPage img {
+    display: none;
+  }
+
+  .landingPage p {
+    font-size: 1.8rem;
+    text-align: center;
+
+    padding: 0;
+    padding-bottom: 2rem;
+    width: inherit;
+  }
 }
 
 @media screen and (max-width: 360px) {

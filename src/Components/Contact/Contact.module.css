@@ -7,6 +7,38 @@ h1 {
   text-align: center;
 }
 
+.Popup {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 2rem;
+  text-align: right;
+  border-radius: 20px;
+  background-color: white;
+  max-width: 60vmin;
+  min-height: 5vmax;
+  z-index: 100;
+  filter: drop-shadow(3px 3px 4px black);
+}
+
+.Popup h1 {
+  padding: 0 4rem;
+}
+
+.CloseBtn {
+  scale: 200%;
+  height: 30px;
+  border: 5px solid var(--color-sidebar);
+  border-radius: 15px;
+}
+
+.CloseBtn:hover {
+  cursor: pointer;
+  background-color: var(--color-sidebar);
+  color: white;
+}
+
 .name {
   height: 30px;
 }
@@ -19,11 +51,10 @@ h1 {
   display: flex;
   padding: 3rem;
   gap: 2rem;
-  margin: 0 auto;
   flex-direction: column;
   text-align: center;
   background-color: white;
-  max-width: 40vmax;
+  max-width: 60vmax;
   min-height: 40vmin;
   border-radius: 20px;
   filter: drop-shadow(4px 4px 5px black);
@@ -54,6 +85,24 @@ h1 {
 
 .textArea {
   height: 200px;
+}
+
+@media screen and (max-width: 1366px) {
+  .contactDiv {
+    margin: 100px auto;
+  }
+
+  .CloseBtn {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contactDiv {
+    margin: 2rem;
+    padding: 1rem;
+  }
 }
 
 @media screen and (max-width: 360px) {

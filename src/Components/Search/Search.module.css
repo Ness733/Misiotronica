@@ -32,6 +32,45 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .searchBar {
+    display: flex;
+
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+    margin: 0 auto;
+    z-index: 99;
+  }
+
+  .searchBar a {
+    width: 225px;
+    margin: 0 auto;
+  }
+
+  .searchBtn {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 225px;
+  }
+
+  .searchBtn:hover {
+    background-color: rgb(68, 68, 216);
+    color: white;
+  }
+
+  .searchBtn:active {
+    background-color: white;
+    color: rgb(68, 68, 216);
+  }
+
+  .searchBox {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 70vmin;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .searchBar {
     display: flex;

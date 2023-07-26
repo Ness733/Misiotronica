@@ -127,6 +127,116 @@
   margin: 6px 0;
 }
 
+@media screen and (max-width: 1366px) {
+  .contenedorSidebar {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contenedorSidebar {
+    height: 100vmax;
+    max-width: 70vmin;
+    transform: translate(-300px, -440px);
+  }
+
+  .Sidebar {
+    position: absolute;
+    top: 1%;
+    transform: translate(100px, 0);
+    width: 60vmin;
+    height: 120vmax;
+  }
+
+  .inactive {
+    position: fixed;
+    position: -webkit-sticky;
+    transform: translate(10px, 0);
+    animation: slideIn 0.5s;
+  }
+
+  .active {
+    position: fixed;
+    position: -webkit-sticky;
+    transform: translate(300px, 0);
+    animation: slideOut 0.2s;
+  }
+
+  .open {
+    position: absolute;
+    /* transform: translate(-150px, 0px); */
+    animation: none;
+    left: 390px;
+  }
+
+  .closed {
+    transform: translate(-150px, -480px);
+    animation: none;
+  }
+
+  .openSidebar {
+    position: absolute;
+    z-index: 100;
+    padding-left: 1rem;
+    transform: translate(250px, -270px);
+    background-color: var(--color-sidebar);
+    filter: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
+
+  .openSidebar:active {
+    background-color: black;
+  }
+
+  .burger {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    100% {
+      /* transform: translateX(380px); */
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translate(300px, 0px);
+    }
+
+    100% {
+      transform: translate(10px, 0px);
+    }
+  }
+
+  @keyframes slideInButton {
+    0% {
+      transform: none;
+    }
+    100% {
+      transform: none;
+    }
+  }
+
+  .Sidebar ul {
+    transform: translateY(50%);
+    gap: 0.7rem;
+    padding: 0 1rem;
+  }
+
+  .links {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .contenedorSidebar {
     height: 100vmax;
