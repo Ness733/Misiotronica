@@ -1,0 +1,16 @@
+.DivNotFound {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  height: 700px;
+  width: 90vmax;
+}
+
+.DivNotFound img {
+  padding: 2rem;
+  height: 400px;
+  width: 400px;
+}
