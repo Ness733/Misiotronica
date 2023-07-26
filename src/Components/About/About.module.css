@@ -2,11 +2,11 @@
   display: flex;
   padding: 3rem;
   gap: 2rem;
-  margin: 200px auto;
+  margin: 100px auto;
   flex-direction: column;
   text-align: center;
   background-color: white;
-  max-width: 40vmax;
+  max-width: 60vmax;
   min-height: 40vmin;
   border-radius: 20px;
   filter: drop-shadow(4px 4px 5px black);
@@ -22,9 +22,37 @@
   font-weight: 700;
 }
 
+@media screen and (max-width: 1366px) {
+  .About {
+    margin: 50px auto;
+    gap: 0;
+  }
+
+  .About p {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .About {
+    margin: 2rem;
+    gap: 0;
+  }
+
+  .About h1 {
+    padding: 0;
+  }
+
+  .About p {
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .About {
-    margin: 0.5rem;
+    margin: 1.8rem;
     gap: 0;
   }
 
