@@ -13,12 +13,14 @@ import { About } from "../About/About.js";
 import { Contact } from "../Contact/Contact.js";
 import { Sidebar } from "../Sidebar/Sidebar.js";
 import { Main } from "../Main/Main.js";
+import { NotFound } from "../404/NotFound";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Main />} />
+        <Route path="*" element={<NotFound />} />
         <Route path="/Main" element={<Main />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
