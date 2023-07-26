@@ -14,18 +14,25 @@ export const Pagination = ({
     pageNumbers.push(i);
   }
 
+  const selectPageOne = (number) => {
+    // Usando === no convertia la página 1 a la página activa
+    // eslint-disable-next-line
+    if (number == currentPage) {
+      return `${styles.active}`;
+    }
+  };
+
   return currentFilter === "" ? (
     <div>
       <ul className={styles.Pagination}>
-        {pageNumbers.map((number) => (
-          <li key={number} className={styles.pageItem}>
+        {pageNumbers.map((number = 1) => (
+          <li key={number} className={`${styles.pageItem}`}>
             <button
+              id={`P${number}`}
               onClick={() => {
                 paginate(number);
               }}
-              className={`${styles.pageNumber} ${
-                styles[number === currentPage ? "active" : ""]
-              }`}
+              className={`${styles.pageNumber} ${selectPageOne(number)}`}
             >
               {number}
             </button>

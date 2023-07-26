@@ -12,9 +12,14 @@
 
 .pageItem {
   text-align: center;
+
   border-radius: 10px;
   padding: 0;
   margin: 1rem;
+}
+
+.pageItem.on {
+  background-color: white;
 }
 
 .Pagination button {
@@ -27,6 +32,7 @@
   font-size: 2rem;
   margin-top: 30px;
   margin-bottom: 70px;
+  scale: 90%;
 }
 
 .Pagination button:hover {
@@ -37,6 +43,7 @@
 }
 
 .Pagination button.active {
+  scale: 110%;
   background-color: white;
   color: var(--color-sidebar);
 }
@@ -47,6 +54,31 @@
   color: white;
   filter: drop-shadow(2px 2px 4px black);
   transform: translateX(-20px);
+}
+
+@media screen and (max-width: 1366px) {
+  .endSearch {
+    font-size: 2rem;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Pagination {
+    display: none;
+    padding: 0;
+  }
+
+  .endSearch {
+    position: absolute;
+    transform: translate(5%, 30%);
+    padding: 1rem;
+    max-width: 70vmin;
+  }
+
+  .endSearch h2 {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 360px) {
