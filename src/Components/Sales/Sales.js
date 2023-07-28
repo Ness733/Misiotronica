@@ -9,6 +9,7 @@ import { searchText } from "../Redux/store";
 function Sales() {
   // Parámetros de Redux
   const currentFilter = useSelector((state) => state.searchContent);
+
   const dispatch = useDispatch();
   // Items por página y página inicial
   const [currentPage, setCurrentPage] = useState([1]);
