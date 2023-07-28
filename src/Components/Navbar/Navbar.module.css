@@ -1,3 +1,8 @@
+:root {
+  --color-sidebar: rgb(86, 118, 179);
+  --color-textSidebar: white;
+}
+
 .Nav_bar {
   background-color: rgba(255, 255, 255, 0.719);
 }
@@ -19,6 +24,28 @@
 
 .logoNombre {
   margin: auto 0;
+}
+
+.Cart {
+  display: flex;
+  height: 50px;
+  width: 100px;
+  border: none;
+  transform: translateY(20px);
+  color: var(--color-sidebar);
+}
+
+.Cart:hover {
+  cursor: pointer;
+}
+
+.ProductCount {
+  padding: 4px 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: red;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 1366px) {
