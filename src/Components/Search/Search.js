@@ -1,8 +1,7 @@
 import styles from "./Search.module.css";
-import { useDispatch } from "react-redux";
 import { searchText } from "../Redux/store";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 
 export default function Search() {
@@ -13,6 +12,7 @@ export default function Search() {
 
   const getSearch = () => {
     const getText = value;
+    console.log(getText);
     const newGetText = getText
       .normalize("NFD")
       .replace(
