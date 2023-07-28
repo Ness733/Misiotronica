@@ -10,6 +10,7 @@
 .sections {
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
   padding: 1rem;
 }
@@ -33,6 +34,7 @@
   border: none;
   transform: translateY(20px);
   color: var(--color-sidebar);
+  background-color: transparent;
 }
 
 .Cart:hover {
@@ -49,8 +51,16 @@
 }
 
 @media screen and (max-width: 1366px) {
+  .Cart {
+    transform: translateY(26px);
+  }
+
+  .ProductCount {
+    height: 18px;
+  }
+
   .sections {
-    gap: 0.5rem;
+    gap: 0;
     padding: 0;
   }
 
@@ -92,6 +102,34 @@
     padding: 0;
     display: block;
   }
+
+  .Cart {
+    position: fixed;
+    position: -webkit-sticky;
+    bottom: 10%;
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    right: 5%;
+    z-index: 100;
+  }
+
+  .Cart:active {
+    color: white;
+  }
+
+  .CartBg {
+    padding: 6px 10px;
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid var(--color-sidebar);
+    width: 50px;
+    height: 60px;
+  }
+
+  .CartBg:active {
+    background-color: var(--color-sidebar);
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -99,6 +137,34 @@
     padding: 1rem 0;
     text-align: center;
     padding-bottom: 0.5rem;
+  }
+
+  .Cart {
+    position: fixed;
+    position: -webkit-sticky;
+    bottom: 10%;
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    right: 5%;
+    z-index: 100;
+  }
+
+  .Cart:active {
+    color: white;
+  }
+
+  .CartBg {
+    padding: 6px 10px;
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid var(--color-sidebar);
+    width: 50px;
+    height: 60px;
+  }
+
+  .CartBg:active {
+    background-color: var(--color-sidebar);
   }
 
   .logo {

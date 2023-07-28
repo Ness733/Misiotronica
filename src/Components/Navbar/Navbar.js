@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 function Navbar() {
   const [cartsVisibility, setCartVisible] = useState(false);
   const products = useSelector((state) => state.list);
-  console.log(products);
 
   return (
     <div id="Navbar" className={styles.Nav_bar}>
@@ -27,7 +26,9 @@ function Navbar() {
         <Section link="/Sales" title="Ventas" />
         <Section link="/Contact" title="Contacto" />
         <button className={styles.Cart}>
-          <GiShoppingBag size={50} onClick={() => setCartVisible(true)} />
+          <div className={styles.CartBg}>
+            <GiShoppingBag size={50} onClick={() => setCartVisible(true)} />
+          </div>
           {products.length > 0 && (
             <span className={styles.ProductCount}>{products.length}</span>
           )}
