@@ -4,9 +4,23 @@ import { FaTrash } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { RemoveFromCart, changeQty } from "../Redux/store";
 
-const ShoppingCart = function ({ visibility, onClose, onQuantityChange }) {
+const ShoppingCart = function ({ visibility, onClose }) {
   const products = useSelector((state) => state.list);
+  console.log(products);
   const dispatch = useDispatch();
+
+  const x = products.map((product) => {
+    const total = product.precio * product.cantidad;
+    return total;
+  });
+  const totalCart = x.reduce((a, b) => a + b, 0);
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  const formattedTotal = numberWithCommas(totalCart);
+
   return (
     <div
       className={styles.Modal}
@@ -29,7 +43,9 @@ const ShoppingCart = function ({ visibility, onClose, onQuantityChange }) {
               <div className={styles.ProductInfo}>
                 <h3>{product.nombre}</h3>
                 <span className={styles.ProductPrice}>
-                  ${product.precio * product.cantidad}
+                  ${numberWithCommas(product.precio)} x {product.cantidad} u.{" "}
+                  <br />
+                  Total: ${numberWithCommas(product.precio * product.cantidad)}
                 </span>
               </div>
               <select
@@ -60,6 +76,7 @@ const ShoppingCart = function ({ visibility, onClose, onQuantityChange }) {
             <button className={styles.Checkout}>Ir a pagar</button>
           )}
         </div>
+        <h1 className={styles.Total}>Monto Total: ${formattedTotal}</h1>
       </div>
     </div>
   );
