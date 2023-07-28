@@ -6,17 +6,17 @@ import { RemoveFromCart, changeQty } from "../Redux/store";
 
 const ShoppingCart = function ({ visibility, onClose }) {
   const products = useSelector((state) => state.list);
-  console.log(products);
+
   const dispatch = useDispatch();
 
-  const x = products.map((product) => {
+  const mappedList = products.map((product) => {
     const total = product.precio * product.cantidad;
     return total;
   });
-  const totalCart = x.reduce((a, b) => a + b, 0);
+  const totalCart = mappedList.reduce((a, b) => a + b, 0);
 
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  function numberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   const formattedTotal = numberWithCommas(totalCart);
