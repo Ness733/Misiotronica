@@ -13,8 +13,8 @@
 
 .cardTile {
   text-align: center;
-  max-width: 350px;
-  min-height: 260px;
+  width: 350px;
+  min-height: 400px;
   padding-bottom: 2rem;
   background-color: white;
   border-radius: 20px;
@@ -62,13 +62,18 @@
 
 @media screen and (max-width: 1366px) {
   .cardTile {
-    height: 370px;
+    /* height: 400px; */
     width: 240px;
   }
 
   .cardTile img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 140px;
+    margin: 0;
+  }
+
+  .cardTile h3 {
+    padding-bottom: 0;
   }
 }
 
@@ -76,7 +81,7 @@
   .cardTile {
     padding: 0.5rem;
     margin-bottom: 2rem;
-    padding-bottom: 0;
+    padding-bottom: 2rem;
   }
 
   .list {
@@ -93,7 +98,6 @@
     height: 180px;
     padding: 1rem 0;
     margin: 0;
-    margin-bottom: 1.5rem;
   }
 
   .cardTile h3 {
@@ -109,7 +113,7 @@
 
 @media screen and (max-width: 360px) {
   .cardTile {
-    padding: 0.5rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     padding-bottom: 0;
   }
@@ -127,7 +131,7 @@
     height: 110px;
     padding: 1rem 0;
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 
   .cardTile h3 {
