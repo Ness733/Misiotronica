@@ -1,3 +1,5 @@
+Con este Edit doy por completado el proyecto en cuanto a la funcionalidad y consignas establecidas.
+
 Trabajo Integrador de Argentina Programa 4.0
 
 La consigna consiste en desarrollar el sitio web de una empresa ficticia llamada “Misiotrónica”, una
