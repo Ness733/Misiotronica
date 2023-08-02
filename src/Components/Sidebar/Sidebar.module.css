@@ -70,7 +70,7 @@
 .inactive {
   position: fixed;
   position: -webkit-sticky;
-  transform: translateX(-400px);
+  transform: translateX(-410px);
   animation: slideIn 0.5s;
 }
 
@@ -94,7 +94,7 @@
 
 @keyframes slideOut {
   0% {
-    transform: translateX(-400px);
+    transform: translateX(-410px);
   }
   100% {
     /* transform: translateX(380px); */
@@ -107,7 +107,7 @@
   }
 
   100% {
-    transform: translateX(-400px);
+    transform: translateX(-410px);
   }
 }
 
@@ -159,7 +159,7 @@
   .active {
     position: fixed;
     position: -webkit-sticky;
-    transform: translate(300px, 0);
+    transform: translate(295px, 0);
     animation: slideOut 0.2s;
   }
 
