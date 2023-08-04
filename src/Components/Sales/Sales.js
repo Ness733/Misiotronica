@@ -1,10 +1,10 @@
 import styles from "./Sales.module.css";
 import Card from "../Card/Card";
-import { itemsList } from "./listaArticulos";
 import { useState, useEffect } from "react";
 import { Pagination } from "../Pagination/Pagination";
 import { useSelector, useDispatch } from "react-redux";
-import { searchText } from "../Redux/store";
+import { itemsList } from "../../Repository/listaArticulos";
+import { searchText } from "../../Redux/store";
 
 function Sales() {
   // Parámetros de Redux
