@@ -14,6 +14,7 @@ import { Contact } from "../Contact/Contact.js";
 import { Sidebar } from "../Sidebar/Sidebar.js";
 import { Main } from "../Main/Main.js";
 import { NotFound } from "../404/NotFound";
+import Footer from "../Footer/Footer.js";
 
 function App() {
   const router = createHashRouter(
@@ -43,6 +44,7 @@ const Root = () => {
       <div>
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 };
