@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.80ea59f8.css",
-    "main.js": "/static/js/main.0d496719.js",
-    "static/js/787.3e383722.chunk.js": "/static/js/787.3e383722.chunk.js",
-    "static/media/misiotronica_logo.png": "/static/media/misiotronica_logo.ed40c799a52a40178872.png",
-    "static/media/misiotronica_local.jpg": "/static/media/misiotronica_local.00119b068477cfa7d600.jpg",
-    "static/media/misiotronica_fondo.png": "/static/media/misiotronica_fondo.4715b15d191111d340e7.png",
-    "static/media/notfound.png": "/static/media/notfound.7147f1ef623862da1e0e.png",
-    "index.html": "/index.html",
-    "main.80ea59f8.css.map": "/static/css/main.80ea59f8.css.map",
-    "main.0d496719.js.map": "/static/js/main.0d496719.js.map",
-    "787.3e383722.chunk.js.map": "/static/js/787.3e383722.chunk.js.map"
+    "main.css": "/Misiotronica/static/css/main.6df83e91.css",
+    "main.js": "/Misiotronica/static/js/main.95293aff.js",
+    "static/js/787.3e383722.chunk.js": "/Misiotronica/static/js/787.3e383722.chunk.js",
+    "static/media/misiotronica_logo.png": "/Misiotronica/static/media/misiotronica_logo.ed40c799a52a40178872.png",
+    "static/media/misiotronica_local.jpg": "/Misiotronica/static/media/misiotronica_local.00119b068477cfa7d600.jpg",
+    "static/media/misiotronica_fondo.png": "/Misiotronica/static/media/misiotronica_fondo.4715b15d191111d340e7.png",
+    "static/media/notfound.png": "/Misiotronica/static/media/notfound.7147f1ef623862da1e0e.png",
+    "index.html": "/Misiotronica/index.html",
+    "main.6df83e91.css.map": "/Misiotronica/static/css/main.6df83e91.css.map",
+    "main.95293aff.js.map": "/Misiotronica/static/js/main.95293aff.js.map",
+    "787.3e383722.chunk.js.map": "/Misiotronica/static/js/787.3e383722.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80ea59f8.css",
-    "static/js/main.0d496719.js"
+    "static/css/main.6df83e91.css",
+    "static/js/main.95293aff.js"
   ]
 }
