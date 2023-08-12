@@ -1,11 +1,10 @@
 import styles from "./Card.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../Redux/store";
+import { addToCart } from "../../Redux/store";
 
 function Card({ objeto }) {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.list);
-  console.log(products);
   const addProductToCart = (product) => {
     const newProduct = {
       nombre: product.nombre,

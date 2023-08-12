@@ -1,5 +1,5 @@
 import styles from "./Search.module.css";
-import { searchText } from "../Redux/store";
+import { searchText } from "../../Redux/store";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";

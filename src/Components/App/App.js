@@ -3,7 +3,7 @@ import styles from "../App/App.module.css";
 import Navbar from "../Navbar/Navbar";
 import Sales from "../Sales/Sales.js";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   Outlet,
@@ -14,9 +14,10 @@ import { Contact } from "../Contact/Contact.js";
 import { Sidebar } from "../Sidebar/Sidebar.js";
 import { Main } from "../Main/Main.js";
 import { NotFound } from "../404/NotFound";
+import Footer from "../Footer/Footer.js";
 
 function App() {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Main />} />
@@ -43,6 +44,7 @@ const Root = () => {
       <div>
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 };

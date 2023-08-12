@@ -2,7 +2,7 @@ import styles from "./ShoppingCart.module.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaTrash } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { RemoveFromCart, changeQty } from "../Redux/store";
+import { RemoveFromCart, changeQty } from "../../Redux/store";
 
 const ShoppingCart = function ({ visibility, onClose }) {
   const products = useSelector((state) => state.list);
